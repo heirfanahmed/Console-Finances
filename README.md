@@ -51,6 +51,7 @@
 
 ## Links to the deployed website and repository URL:
 ** Deployed website:
+https://heirfanahmed.github.io/Console-Finances/
     
 ** Repository URL:
     https://github.com/heirfanahmed/Console-Finances
