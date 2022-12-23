@@ -87,40 +87,28 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-// console.log(finances[0][2]);
-// for (let i = 0; i < finances.length; i++) {
-//     for (let j = 0; j < finances[i].length; j++) {
-//         console.log(i, j, finances[i] [j])
-//     }    
-// }
-
-
-// const financesAmount = finances.filter((amount) => {
-//     return amount.indexOf[0]
-// })
-// console.log(financesAmount);
-
-// var sum = 0;
-// for(var x=0; x<arr.length; x++)
-//     sum += arr[x][1];
-
-let totalAmount = 0;
-for (i=0; i < finances.length; i++) {
-    totalAmount += finances[i][1];
-}
-totalAmountComma = totalAmount.toLocaleString();
-// console.log(totalAmount);
-
 let totalMonth = (finances.length);
-// console.log(totalMonth + " months");
+
+let result = finances.reduce((a, b, i) => {
+    let d = (i > 1) ? a : {total: a[1], average: a[1], sumChange: 0, lastMonth: a[1], increase: a, decrease: a},
+        change = b[1] - d.lastMonth
+    
+    d.total += b[1]
+    d.sumChange += change
+    d.lastMonth = b[1]
+    d.average = d.sumChange / i
+    d.increase = (d.increase[1] > change) ? d.increase : [b[0], change]
+    d.decrease = (d.decrease[1] < change) ? d.decrease : [b[0], change]
+    return d
+})
 
 console.log(
 `Financial Analysis:\n` +
 `----------------------------\n` +
 `Total Months: ${totalMonth} months\n` +
-`Total Amount of Profit/Losees over the entire period: $${totalAmountComma}\n` +
-`Average Change in Profit/Losses over the entire period: \n` +
-`Greatest Increase in Profits: \n` +
-`Greatest Decrease in Profits: \n` +
+`Total: $${result.total.toLocaleString()}\n` +
+`Average Change: $${result.average.toLocaleString()}\n` +
+`Greatest Increase in Profits: ${result.increase.toLocaleString()}\n` +
+`Greatest Decrease in Profits: ${result.decrease.toLocaleString()}\n` +
 `\n` +
 `Nearest 100th in JavaScript: `);
