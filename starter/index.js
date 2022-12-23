@@ -105,10 +105,10 @@ let result = finances.reduce((a, b, i) => {
 console.log(
 `Financial Analysis:\n` +
 `----------------------------\n` +
-`Total Months: ${totalMonth} months\n` +
-`Total: $${result.total.toLocaleString()}\n` +
-`Average Change: $${result.average.toLocaleString()}\n` +
-`Greatest Increase in Profits: ${result.increase.toLocaleString()}\n` +
-`Greatest Decrease in Profits: ${result.decrease.toLocaleString()}\n` +
+`1) Total Months: ${totalMonth} months\n` +
+`2) Total: $${result.total.toLocaleString()}\n` +
+`3) Average Change: $${result.average.toLocaleString()}\n` +
+`4) Greatest Increase in Profits: ${result.increase.toLocaleString()}\n` +
+`5) Greatest Decrease in Profits: ${result.decrease.toLocaleString()}\n` +
 `\n` +
-`Nearest 100th in JavaScript: `);
+`Average of the changes has been printed to nearest 100th place, decimal wise.`);

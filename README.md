@@ -43,7 +43,7 @@
 
     * In order to combine strings and variables in the console I used **concatenation**.
 
-    * I printed to the nearest 100th in JavaScript?
+    * I printed to the nearest 100th place, decimal wise, in JavaScript?
 
 
 ## Screen Shot of the website
