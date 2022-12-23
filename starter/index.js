@@ -86,3 +86,41 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+// console.log(finances[0][2]);
+// for (let i = 0; i < finances.length; i++) {
+//     for (let j = 0; j < finances[i].length; j++) {
+//         console.log(i, j, finances[i] [j])
+//     }    
+// }
+
+
+// const financesAmount = finances.filter((amount) => {
+//     return amount.indexOf[0]
+// })
+// console.log(financesAmount);
+
+// var sum = 0;
+// for(var x=0; x<arr.length; x++)
+//     sum += arr[x][1];
+
+let totalAmount = 0;
+for (i=0; i < finances.length; i++) {
+    totalAmount += finances[i][1];
+}
+totalAmountComma = totalAmount.toLocaleString();
+// console.log(totalAmount);
+
+let totalMonth = (finances.length);
+// console.log(totalMonth + " months");
+
+console.log(
+`Financial Analysis:\n` +
+`----------------------------\n` +
+`Total Months: ${totalMonth} months\n` +
+`Total Amount of Profit/Losees over the entire period: $${totalAmountComma}\n` +
+`Average Change in Profit/Losses over the entire period: \n` +
+`Greatest Increase in Profits: \n` +
+`Greatest Decrease in Profits: \n` +
+`\n` +
+`Nearest 100th in JavaScript: `);

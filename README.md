@@ -34,9 +34,8 @@
             Average  Change: $-2315.12
             Greatest Increase in Profits: Feb-2012 ($1926159)
             Greatest Decrease in Profits: Sep-2013 ($-2196167)
-            ```
 
-    6.  Final code is prints the analysis to the console.
+    6.  Final code prints the analysis to the console.
 
     **Hints:**
 
